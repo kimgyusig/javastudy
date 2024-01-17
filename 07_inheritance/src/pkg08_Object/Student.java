@@ -87,7 +87,7 @@ public class Student {
       return;
     }
     
-    for(int i = 0; i < bookCount; i++) { // Book 클래스에 Object 클래스의 equals 메소드 오버라이드 해야 한다. (isbn 이 같으면)
+    for(int i = 0; i < bookCount; i++) { // Book 클래스에 Object 클래스의 equals 메소드 오버라이드 해야 한다. (isbn 이 같으면 true 반환)
       if(book.equals(books[i])) {
          System.arraycopy(books, i+1, books, i, bookCount -i -1);
         bookCount--;

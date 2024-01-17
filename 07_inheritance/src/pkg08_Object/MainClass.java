@@ -42,7 +42,7 @@ public class MainClass {
      }
      
      student1.removeBook(new Book("979-11-6224-187-5", "혼자 공부하는 자바"));
-     for(Book b :student1.getBooks() ) { 
+     for(Book b :student1.getBooks() ) { //student1의 배열
        if(b != null) {
        System.out.println(b);  // Book 클래스에 object 클래스의 toString 메소드 오버라이드
        }
