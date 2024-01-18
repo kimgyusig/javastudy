@@ -7,6 +7,7 @@ public class MainClass {
     Tv tv = new Tv();
     Radio radio = new Radio();
     
+    
     Person person = new Person();
     
     person.powerOn(tv);

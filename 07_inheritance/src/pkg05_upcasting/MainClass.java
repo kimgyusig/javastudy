@@ -21,6 +21,10 @@ public class MainClass {
     computer.internet();
     computer.game();
     
+    ((Tablet)computer).screenTouch();
+    if (computer instanceof Tablet) {
+     ((Tablet) computer).screenTouch();
+    }
     
     
     

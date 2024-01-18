@@ -51,7 +51,7 @@ public class MainClass {
     hobbies.add("레고");
     hobbies.add("모임");
     hobbies.add("수영");
-    hobbies.add( "dnswjs");
+    
     // 저장된 요소의 개수
     System.out.println(hobbies.size());
     
@@ -66,7 +66,7 @@ public class MainClass {
     
     // 배열을 List로 바꾸기
     Integer[] arr = new Integer[] {10, 20, 30};    
-    
+        
     // 배열을 List로 바꿔서 반환하는 java.util.Arrays 클래스의 asList 메소드
     List<Integer> numbers = Arrays.asList(arr);
     
