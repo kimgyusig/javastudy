@@ -2,6 +2,7 @@ package practice01;
 
 
 
+import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -185,6 +186,13 @@ public class MainClass {
      // 실행예시2)
      //   몇 자리의 인증번호를 생성할까요? >>> 6
      //   생성된 6자리 인증번호는 Fa013b입니다.
+     SecureRandom random = new SecureRandom();
+     Scanner sc = new Scanner(System.in);
+     System.out.println("몇 자리의 인증번호를 생성할까요 >>>");
+     String pw = sc.next();
+     
+   
+     
      
    }
 
@@ -201,6 +209,19 @@ public class MainClass {
      // ...
      // 입력 >>> 4500
      // 정답입니다. 총 5번만에 성공했습니다.
+     Scanner sc = new Scanner(System.in);
+     System.out.println("입력 >>>");
+     
+     String put = sc.next();
+    SecureRandom random = new SecureRandom();
+    int a = random.nextInt(1000) +1;
+    if(a <random.nextInt(1000) +1) {
+      System.out.println("Down");
+    }else {
+      System.out.println("Up");
+    }
+     System.out.println(a);
+       
      
      
    }
@@ -254,7 +275,7 @@ public class MainClass {
    }
    
   public static void main(String[] args) {
-     method5();
+     method7();
 
 //     Map<String, Object> map = method2("140101-3123456");
 //    

@@ -9,6 +9,7 @@ public class Class02_SecureRandom {
     // 기본 시드 사용 : new SecureRandom()
     // 시드 전달 가능 : new SecureRandom(byte[] seed)
     
+    
     SecureRandom secureRandom = new SecureRandom("김규식".getBytes());
     
     // nextDouble() : 0.0 <= 난수 < 1.0
