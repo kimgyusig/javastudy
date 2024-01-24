@@ -7,7 +7,7 @@ public class Class03_DecimalFormat {
   public static void main(String[] args) {
 
     double number = 12345.6789;
-    
+    double number2 = 5459;
     DecimalFormat df = new DecimalFormat("#,##0.00");
     System.out.println(df.format(number));
     

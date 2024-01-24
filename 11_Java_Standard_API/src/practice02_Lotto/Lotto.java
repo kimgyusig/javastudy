@@ -1,5 +1,8 @@
 package practice02_Lotto;
 
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
 public class Lotto {
 
   
@@ -12,10 +15,11 @@ public class Lotto {
    */
   public int buyLotto() throws RuntimeException {
     
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);          //구매로또를 gener로보냄
     
     /* 여기에 구현 */
-    
+    int money;
+    money = sc.nextInt();
     
     
     

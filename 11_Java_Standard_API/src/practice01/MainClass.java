@@ -4,11 +4,13 @@ package practice01;
 
 import java.security.SecureRandom;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.UUID;
@@ -46,16 +48,12 @@ public class MainClass {
   
    public static Map<String, Object> method2(String id) {
      
-     
-    
-      
+  
     
      
      
      
-    // LocalDateTime now =  LocalDateTime.now();
-    // int year = now.getYear();
-    // LocalDateTime b = LocalDateTime.of(2024, 1, 2, 2, 30);
+    
     // 나이 구하기 + 성별 구하기
     // 나이 : 현재년도 - 태어난년도 
     // 성별 : 하이픈 뒤의 숫자가 1,3이면 남, 2,4이면 여
@@ -142,7 +140,7 @@ public class MainClass {
       // 출금액 : 1 <= 난수 <= balance
       int money = (int)(Math.random() * balance +1);  // 1부터 5000까지
       count++;
-      System.out.println("출금전"+ balance + "원" + count + "회 출금액" + money + "원, 출금후" +(balance -= money) );
+      System.out.println("출금전"+ balance + "원" + count + "회 출금액" + money + "원, 출금후" +(balance -= money) + "원");
       
     }
      
@@ -165,7 +163,7 @@ public class MainClass {
     int totalMove = 0;
     do {
       move = (int)(Math.random() * 5 + 1);  // 윷 던지는 코드
-      totalMove += move;   // 실행예시5) "모", "윷", "도", 10칸 이동한다.  모윷도를 더해야 10칸 무브를 더한다 구매로또를 gener로보냄
+      totalMove += move;   // 실행예시5) "모", "윷", "도", 10칸 이동한다.  모윷도를 더해야 10칸 무브를 더한다 
       builder.append(yuts[move]);
       builder.append(", ");
      } while( move >= 4);
@@ -191,7 +189,8 @@ public class MainClass {
      System.out.println("몇 자리의 인증번호를 생성할까요 >>>");
      String pw = sc.next();
      
-   
+    
+     
      
      
    }
@@ -206,21 +205,29 @@ public class MainClass {
      // Down!
      // 입력 >>> 2500
      // Up!
-     // ...
+     // ... 
      // 입력 >>> 4500
      // 정답입니다. 총 5번만에 성공했습니다.
      Scanner sc = new Scanner(System.in);
      System.out.println("입력 >>>");
+     int put = sc.nextInt();
      
-     String put = sc.next();
+     
     SecureRandom random = new SecureRandom();
-    int a = random.nextInt(1000) +1;
-    if(a <random.nextInt(1000) +1) {
-      System.out.println("Down");
-    }else {
-      System.out.println("Up");
+    int result = random.nextInt(10000) +1;
+    int count = 0;
+    while(result != put) {
+       if(result < put) {
+        System.out.println("Down");
+        
+        
+      }else if(result> put){
+        System.out.println("up");
+        
+      }else {
+        System.out.println("정답입니다");
+      }
     }
-     System.out.println(a);
        
      
      
@@ -240,6 +247,8 @@ public class MainClass {
      // 7 : ################## 18
      // 8 : ####### 7
      // 9 : ########### 11
+     int a = (int)Math.random()*9;
+           
      
      
    }
@@ -271,11 +280,13 @@ public class MainClass {
      //  14 20 11 19  6
      //   8 17  5 12  7
      //  16 22 18 24 23
+     int [][] arr = new int[5][5];
+     
      
    }
    
   public static void main(String[] args) {
-     method7();
+     method4();
 
 //     Map<String, Object> map = method2("140101-3123456");
 //    

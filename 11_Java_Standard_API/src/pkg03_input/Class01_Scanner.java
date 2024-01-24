@@ -18,6 +18,8 @@ public class Class01_Scanner {
    *    7) next().charAt(0) : char 입력
    */
   
+  
+  
   public static void main(String[] args) {
     
     // Scanner 객체 선언 및 생성
