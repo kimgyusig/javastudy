@@ -208,26 +208,27 @@ public class MainClass {
      // ... 
      // 입력 >>> 4500
      // 정답입니다. 총 5번만에 성공했습니다.
+     
+     
      Scanner sc = new Scanner(System.in);
-     System.out.println("입력 >>>");
-     int put = sc.nextInt();
+     int goal = (int)(Math.random() * 10000) + 1;
+     int input = 0;
+     int nth = 0;
      
-     
-    SecureRandom random = new SecureRandom();
-    int result = random.nextInt(10000) +1;
-    int count = 0;
-    while(result != put) {
-       if(result < put) {
-        System.out.println("Down");
-        
-        
-      }else if(result> put){
-        System.out.println("up");
-        
-      }else {
-        System.out.println("정답입니다");
-      }
-    }
+    
+     do {
+       System.out.println("입력 >>> ");
+       input = sc.nextInt();
+       nth++;
+       if(goal == input) {
+         System.out.println("정답은 " + goal + "이었습니다. " + nth + "번만에 성공했습니다.");
+       } else if(goal > input) {
+         System.out.println("Up!");
+       } else {
+         System.out.println("Down!");
+       }
+     } while(goal != input);
+     sc.close();
        
      
      
@@ -286,7 +287,7 @@ public class MainClass {
    }
    
   public static void main(String[] args) {
-     method4();
+     method7();
 
 //     Map<String, Object> map = method2("140101-3123456");
 //    

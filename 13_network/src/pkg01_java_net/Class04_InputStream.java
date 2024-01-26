@@ -19,7 +19,7 @@ public class Class04_InputStream {
     
     BufferedReader in = null;
     
-    try {
+    try { 
       
       url = new URL(spec);
       con = (HttpURLConnection)url.openConnection();
